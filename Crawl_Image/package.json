@@ -1,0 +1,30 @@
+{
+  "name": "Crawl_Image",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "image-downloader": "^4.0.3",
+    "puppeteer": "^10.4.0",
+    "puppeteer-core": "^10.4.0",
+    "puppeteer-extra": "^3.2.0",
+    "puppeteer-extra-plugin-stealth": "^2.8.0",
+    "rimraf": "^3.0.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Xingtitan/Crawl_Image.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Xingtitan/Crawl_Image/issues"
+  },
+  "homepage": "https://github.com/Xingtitan/Crawl_Image#readme"
+}
