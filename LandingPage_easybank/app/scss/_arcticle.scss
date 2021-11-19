@@ -1,0 +1,111 @@
+.arcticle {
+    background-color: $veryLightGray;
+}
+
+.arcticle__content {
+    padding-top: 9.8rem;
+    padding-bottom: 8rem;
+
+    @include phone {
+        position: relative;
+        display: grid;
+        padding: 9.5rem 0 8.5rem 0;
+        place-items: center;
+        text-align: center;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+.arcticle__title {
+    padding-bottom: 5.8rem;
+
+    h3 {
+        font-size: 3.8rem;
+        font-weight: 100;
+        color: $darkBlue;
+    }
+
+    @include phone {
+        padding-bottom: 3rem;
+
+        h3 {
+            font-size: 3.4rem;
+        }
+    }
+}
+
+.arcticle__grid {
+    display: flex;
+    justify-content: space-between;
+
+    @include phone {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.arcticle__item {
+    display: block;
+    width: 25.5rem;
+    overflow: hidden;
+    border-radius: 5px;
+    background-color: $white;
+
+    @include phone {
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        width: calc(100% - 48px);
+        border-right: 20px;
+        margin-bottom: 2.4rem;
+    }
+}
+
+.arcticle__img {
+    height: 20rem;
+    width: 100%;
+
+    @include phone {
+        height: 75vw;
+        width: 100%;
+    }
+}
+
+.item__content {
+    margin: 3rem 2.4rem 2.6rem;
+    
+    @include phone {
+        margin: 3.1rem 3.9rem 4.5rem;
+        text-align: left;
+    }
+}
+
+.arcticle__author {
+    p {
+        font-size: 1.1rem;
+        color: $grayishBlue;
+    }
+}
+
+.arcticle__issue {
+    margin: 1.5rem 0;
+    a {
+        font-size: 1.7rem;
+        color: $darkBlue;
+        opacity: 1;
+
+        &:hover {
+            color: $limeGreen;
+            opacity: 0.5;
+        }
+    }
+}
+
+.arcticle__description {
+    p {
+        font-size: 1.4rem;
+        color: $grayishBlue;
+    }
+}
+

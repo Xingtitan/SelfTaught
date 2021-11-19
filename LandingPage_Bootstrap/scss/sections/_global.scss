@@ -1,0 +1,47 @@
+@use "../custom" as *;
+@use "../components/mixins" as *;
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Public Sans', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+  padding: 0;
+}
+
+ul > li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container-fluid {
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+.btn {
+  border: none;
+  width: 16.6rem;
+  height: 4.6rem;
+}
+
+.btn-rounded {
+  @include gradient;
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: $white;
+
+  &:hover {
+    opacity: 0.75;
+  }
+}

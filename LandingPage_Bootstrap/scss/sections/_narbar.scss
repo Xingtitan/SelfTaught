@@ -1,0 +1,135 @@
+@use "../custom" as *;
+@use "../components/mixins" as *;
+
+nav {
+  background-color: $white;
+  padding: 1.6rem 0;
+
+  .navbar-toggler:focus,
+  .navbar-toggler:active,
+  .navbar-toggler-icon:focus {
+    outline: none;
+    box-shadow: none;
+  }
+
+  .navbar-toggler {
+    position: relative;
+    @include middle;
+    width: 36px;
+    height: 36px;
+    cursor: pointer;
+  }
+
+  .toggler-icon {
+    position: absolute;
+    display: block;
+    width: 26px;
+    height: 2px;
+    background-color: red;
+    transition: all 0.3s ease-in-out;
+  }
+
+  // .navbar-toggler .top-bar {
+  //   transform: rotate(45deg);
+  // }
+
+  // .navbar-toggler .middle-bar {
+  //   opacity: 0;
+  // }
+
+  // .navbar-toggler .bottom-bar {
+  //   transform: rotate(-45deg);
+  // }
+
+  .navbar-toggler {
+    .top-bar {
+      transform: rotate(45deg);
+    }
+
+    .middle-bar {
+      opacity: 0;
+    }
+
+    .bottom-bar {
+      transform: rotate(-45deg);
+    }
+  }
+
+  // .navbar-toggler.collapsed .top-bar {
+  //   transform: translateY(-8px);
+  // }
+
+  // .navbar-toggler.collapsed .middle-bar {
+  //   opacity: 1;
+  // }
+
+  // .navbar-toggler.collapsed .bottom-bar {
+  //   transform: translateY(8px);
+  // }
+
+  // .navbar-toggler.collapsed .toggler-icon {
+  //   background-color: $darkBlue;
+  // }
+
+  .navbar-toggler.collapsed {
+    .top-bar {
+      transform: translateY(-8px);
+    }
+  
+    .middle-bar {
+      opacity: 1;
+    }
+  
+    .bottom-bar {
+      transform: translateY(8px);
+    }
+  
+    .toggler-icon {
+      background-color: $darkBlue;
+    }
+  }
+
+  li {
+    a {
+      color: $grayishBlue;
+      font-size: 1.6rem;
+      font-weight: 500;
+      margin-left: 0.96rem;
+      margin-right: 0.96rem;
+
+      &::after {
+        content: "";
+        display: none;
+
+        @include media-breakpoint-up(lg) {
+          position: relative;
+          display: block;
+          @include gradient;
+          height: 5px;
+          width: 0;
+          left: 0;
+          bottom: -20px;
+          transition: width 0.3s;
+        }
+      }
+    }
+
+    &:hover {
+      a {
+        color: $darkBlue;
+
+        &::after {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  @include media-breakpoint-down(lg) {
+    .navbar-nav {
+      @include middle;
+      border: 1px solid red;
+      margin-top: 100px;
+    }
+  }
+}

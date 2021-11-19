@@ -1,0 +1,53 @@
+@use "../custom" as *;
+@use "../components/mixins" as *;
+
+.feature {
+  background: $lightGrayishBlue;
+
+  @include media-breakpoint-down(lg) {
+      text-align: center;
+  }
+
+  &__content {
+    padding-top: 11rem;
+    padding-bottom: 10.5rem;
+  }
+
+  &__title {
+    h1 {
+      font-size: 3.8rem;
+      font-weight: 100;
+      color: $darkBlue;
+    }
+  }
+
+  &__text {
+    margin-top: 3.4rem;
+    margin-bottom: 7.6rem;
+
+    p {
+      font-size: 2rem;
+      line-height: 1.6;
+      color: $grayishBlue;
+    }
+  }
+
+  &__item--title {
+    margin-top: 4.4rem;
+    margin-bottom: 3.4rem;
+
+    h2 {
+      font-size: 2.4rem;
+      font-weight: 100;
+      color: $darkBlue;
+    }
+  }
+
+  &__description {
+    p {
+      font-size: 1.6rem;
+      line-height: 1.6;
+      color: $grayishBlue;
+    }
+  }
+}

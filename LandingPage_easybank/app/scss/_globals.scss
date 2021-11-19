@@ -1,0 +1,84 @@
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Public Sans', sans-serif;
+}
+
+h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+}
+
+ul > li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container__fluid {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 100%;
+    max-width: 1440px;
+
+    @include phone {
+        width: 100%;
+    }
+}
+
+.container {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 1110px;
+    margin: 0;
+    padding: 0;
+
+    @include phone {
+    }
+}
+
+.btn {
+    display: grid;
+    place-items: center;
+    width: 16.6rem;
+    height: 4.6rem;
+    border-radius: 50px;
+    background: linear-gradient(to right, $limeGreen, $brightCyan);
+    cursor: pointer;
+    opacity: 1;
+
+    a {
+        font-size: 1.8rem;
+        font-weight: 400;
+        color: $white;
+    }
+
+    &:hover {
+        opacity: 0.75;
+    }
+}
+
+.hidden-for-phone {
+    @include phone {
+        display: none;
+    }
+}
+
+
+
+
+
+

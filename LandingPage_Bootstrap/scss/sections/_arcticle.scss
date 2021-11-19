@@ -1,0 +1,66 @@
+@use "../custom" as *;
+@use "../components/mixins" as *;
+
+.arcticle {
+  background-color: $veryLightGray;
+
+  &__content {
+    padding-top: 9.8rem;
+    padding-bottom: 8rem;
+  }
+
+  &__title {
+    padding-bottom: 5.8rem;
+
+    h3 {
+      font-size: 3.8rem;
+      font-weight: 100;
+      color: $darkBlue;
+    }
+  }
+
+  &__item {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 5px;
+    background-color: $white;
+  }
+
+  &__img {
+    // height: 20rem;
+    height: auto;
+    width: 100%;
+  }
+
+  .item__content {
+    margin: 3rem 2.4rem 2.6rem;
+  }
+
+  &__author {
+    p {
+      font-size: 1.1rem;
+      color: $grayishBlue;
+    }
+  }
+
+  &__issue {
+    margin: 1.5rem 0;
+    a {
+      font-size: 1.7rem;
+      color: $darkBlue;
+      opacity: 1;
+
+      &:hover {
+        color: $limeGreen;
+        opacity: 0.5;
+      }
+    }
+  }
+
+  &__description {
+    p {
+      font-size: 1.4rem;
+      color: $grayishBlue;
+    }
+  }
+}

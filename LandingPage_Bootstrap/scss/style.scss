@@ -1,0 +1,13 @@
+@use "custom";
+
+// import the components
+@use "components/mixins";
+
+// import the sections
+@use "sections/global";
+@use "sections/narbar";
+@use "sections/hero";
+@use "sections/feature";
+@use "sections/arcticle";
+
+

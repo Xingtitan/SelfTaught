@@ -1,0 +1,163 @@
+.header {
+  background-color: $white;
+  padding: 1.6rem 0;
+
+  @include phone {
+    position: relative;
+    z-index: 5;
+    padding: 1.4rem 2.4rem;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo {
+    display: block;
+    width: 140px;
+    height: 22px;
+  }
+
+  &__links {
+    ul {
+      display: flex;
+      flex-direction: row;
+      padding: 0;
+      margin: 0;
+
+      @include phone {
+        position: absolute;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 3.4rem;
+        top: 8.8rem;
+        left: 0;
+        width: 100%;
+        border-radius: 5px;
+        background-color: $white;
+        border: 1px solid $grayishBlue;
+      }
+    }
+
+    li {
+      margin: 0 1.6rem;
+      font-size: 1.6rem;
+
+      @include phone {
+        &:not(:last-child) {
+          padding-bottom: 2.8rem;
+        }
+      }
+    }
+
+    a {
+      color: $grayishBlue;
+
+      &::after {
+        content: "";
+        position: relative;
+        display: block;
+        background: linear-gradient(to right, $limeGreen, $brightCyan);
+        height: 5px;
+        width: 0;
+        bottom: -26px;
+        transition: width 0.3s;
+
+        @include phone {
+          display: none;
+        }
+      }
+
+      &:hover {
+        color: $darkBlue;
+
+        &::after {
+          width: 100%;
+        }
+      }
+    }
+
+    @include phone {
+      display: none;
+    }
+  }
+}
+
+.menuBtn {
+  display: none;
+  @include phone {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 36px;
+    height: 36px;
+    cursor: pointer;
+
+    &__hamburger {
+      width: 26px;
+      height: 2px;
+      background-color: $darkBlue;
+    }
+
+    &__hamburger::before,
+    &__hamburger::after {
+      content: "";
+      position: absolute;
+      width: 26px;
+      height: 2px;
+      background-color: $darkBlue;
+      transition: all 0.2s ease-in-out;
+    }
+
+    &__hamburger::before {
+      transform: translateY(-8px);
+    }
+
+    &__hamburger::after {
+      transform: translateY(8px);
+    }
+  }
+}
+
+@include phone {
+  .open {
+    .menuBtn {
+      &__hamburger {
+        background: transparent;
+      }
+
+      &__hamburger::before {
+        transform: rotate(135deg);
+      }
+
+      &__hamburger::after {
+        transform: rotate(-135deg);
+      }
+    }
+  }
+
+  .overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient($darkBlue, $white);
+    visibility: hidden;
+  }
+
+  .overlay.open {
+    visibility: visible;
+  }
+
+  .header__links.open {
+    display: flex;
+  }
+}

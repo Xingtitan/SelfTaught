@@ -1,0 +1,11 @@
+@use "../custom" as *;
+
+@mixin gradient {
+    background: linear-gradient(to right, $limeGreen, $brightCyan);
+}
+
+@mixin middle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

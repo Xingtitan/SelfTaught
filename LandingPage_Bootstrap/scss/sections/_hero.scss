@@ -1,0 +1,46 @@
+@use "../custom" as *;
+@use "../components/mixins" as *;
+
+.hero {
+  background-color: $veryLightGray;
+
+  @include media-breakpoint-down(lg) {
+    text-align: center;
+  }
+
+  &__content {
+    padding-top: 18rem;
+    padding-bottom: 17rem;
+  }
+
+  &__title {
+    h1 {
+      color: $darkBlue;
+      font-size: 5.2rem;
+      line-height: 1.2;
+
+      @include media-breakpoint-down(lg) {
+        font-size: 3.8rem;
+      }
+    }
+  }
+
+  &__text {
+    padding-top: 3.2rem;
+    padding-bottom: 4rem;
+
+    p {
+      color: $grayishBlue;
+      font-size: 2rem;
+      line-height: 1.6;
+
+      @include media-breakpoint-down(lg) {
+          font-size: 1.5rem;
+      }
+    }
+  }
+}
+
+.background_img {
+    
+}
