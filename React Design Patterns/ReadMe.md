@@ -1,0 +1,1 @@
+Build modular applications that are easy to scale using the most powerful React components and design patterns
